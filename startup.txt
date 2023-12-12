@@ -1,0 +1,18 @@
+sudo nginx
+
+cd /Users/Shared/src/django_src/alex_django_db
+.venv/bin/gunicorn alexdbdjango.wsgi -b 0.0.0.0:8000 --daemon
+
+cd /Users/Shared/src/react_src/microblog-api
+#.venv/bin/gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app --daemon
+.venv/bin/gunicorn microblog:app -b :5000 --daemon
+
+cd /Users/Shared/src/django_src/django-google-sheets
+.venv/bin/gunicorn core.wsgi -b :8001 --daemon
+
+cd /Users/Shared/src/flask_src/flask_db
+.venv/bin/gunicorn flask_db:app -b :5001 --daemon
+
+# https://adamj.eu/tech/2023/11/19/django-stop-backgrounded-runserver/
+# lsof -i :8000 -t | xargs -t kill
+
