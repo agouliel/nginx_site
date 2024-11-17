@@ -1,6 +1,6 @@
 sudo nginx
 
-cd /Users/Shared/src/django_src/django_src
+cd /Users/Shared/src/django_src/alex_django_db
 .venv/bin/gunicorn alexdbdjango.wsgi -b 0.0.0.0:8000 --daemon
 
 cd /Users/Shared/src/react_src/microblog-api
