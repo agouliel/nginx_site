@@ -13,6 +13,9 @@ cd /Users/Shared/src/django_src/django-google-sheets
 cd /Users/Shared/src/flask_src/flask_db
 .venv/bin/gunicorn flask_db:app -b :5001 --daemon
 
+cd /Users/Shared/src/python_src/guyton
+.venv/bin/gunicorn guyton_web:app -b :5002 --daemon
+
 # https://adamj.eu/tech/2023/11/19/django-stop-backgrounded-runserver/
 # lsof -i :8000 -t | xargs -t kill
 
