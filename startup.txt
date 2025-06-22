@@ -16,11 +16,11 @@ cd /Users/Shared/src/flask_src/flask_db
 cd /Users/Shared/src/python_src/guyton
 .venv/bin/gunicorn guyton_web:app -b :5002 --daemon
 
+ssh mini << EOF
 cd /Users/Shared/src/react_src/nextjs
-#npm run build
-#cp -r out/. ~/www/nextbuild
-#mv out nextbuild
-npm run start &
+npm run build
+nohup npm run start </dev/null >/dev/null 2>&1 &
+EOF
 
 # https://adamj.eu/tech/2023/11/19/django-stop-backgrounded-runserver/
 # lsof -i :8000 -t | xargs -t kill
