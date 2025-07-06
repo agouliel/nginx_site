@@ -17,7 +17,8 @@ http {
         server_name  agouliel.ddns.net;
 
         location ~ /.well-known {
-          root /usr/local/homebrew/var/www/letsencrypt;
+          #root /usr/local/homebrew/var/www/letsencrypt;
+          root /opt/homebrew/var/www/letsencrypt;
         }
 
         location / {
