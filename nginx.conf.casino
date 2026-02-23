@@ -95,16 +95,6 @@ http {
           #root /Users/Shared/src/react_src/nextjs;
         #}
 
-        #location /_next/static {
-          #root /Users/Shared/src/react_src/nextjs/nextbuild;
-          #proxy_pass http://localhost:3000/_next/static;
-          #proxy_pass http://localhost:8016/_next/static;
-        #}
-
-        #location /_next/image {
-          #proxy_pass http://localhost:8016/_next/image;
-        #}
-
         location /monorepo {
           proxy_pass http://localhost:8013;
           proxy_set_header Host $host;
@@ -116,15 +106,6 @@ http {
         location / {
           proxy_pass http://localhost:8016/;
         }
-
-        #location /icons {
-          #proxy_pass http://localhost:8016/icons;
-        #}
-
-        #location / {
-            #root   html;
-            #index  index.html index.htm;
-        #}
 
 	client_max_body_size 20M;
     }
