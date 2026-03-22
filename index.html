@@ -1,44 +1,176 @@
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandros Goulielmos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
 
-<TITLE>Alexandros Goulielmos</TITLE>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-<style type="text/css">
-html {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-p {
-  font-size: 20px;
-}
-</style>
+        .container {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 90%;
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        img {
+            border-radius: 50%; /* Modern circular look */
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin: 0.5rem 0;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 12px;
+        }
+
+        strong {
+            color: var(--text-main);
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+            word-break: break-all;
+        }
+
+        .project-link {
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .project-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+    </style>
 </head>
-
 <body>
 
-<H1>Alexandros Goulielmos</H1>
-<IMG SRC="alex.jpg" width="457" height="343">
+<div class="container">
+    <img src="alex.jpg" alt="Alexandros Goulielmos">
+    
+    <h1>Alexandros Goulielmos</h1>
+    <div class="subtitle">Senior Software Engineer</div>
 
-<p><h2>Senior Software Engineer - Greece</h2></p>
+    <div class="section">
+        <strong>Experience</strong>
+        Current: Digitech Marketing<br>
+        <small style="color: var(--text-muted)">Previously: Ionia, Intralot, ASE, Info-Quest, Intrasoft, GNT</small>
+    </div>
 
-<p><strong>Current company:</strong> Digitech Marketing
-<br>
-<strong>Previous:</strong> Ionia Management, Intralot, Athens Stock Exchange, Info-Quest, Intrasoft International, GNT<p>
+    <div class="section">
+        <strong>Education</strong>
+        NTUA - Electrical and Computer Engineering<br>
+        Carnegie Mellon - MSc in Information Networking
+    </div>
 
-<p><strong>Education:</strong>
-<br>
-National Technical University of Athens - Electrical and Computer Engineering
-<br>
-Carnegie Mellon University, Pittsburgh USA - MSc in Information Networking</p>
+    <div class="section">
+        <strong>Personal Projects</strong>
+        <div class="links-grid" id="project-container">
+            <a href="/django" class="project-link">Django DB</a>
+            <a href="/flask" class="project-link">Flask DB</a>
+            <a href="/microblog" class="project-link">Microblog</a>
+            <a href="/alexgram" class="project-link">AlexGram</a>
+            <a href="/guyton" class="project-link">Guyton</a>
+            <a href="/next" class="project-link">Next.js</a>
+        </div>
+    </div>
 
-<p>My Github Pages site: <a href="http://agouliel.github.io">http://agouliel.github.io</a></p>
+    <div class="social-links">
+        <a href="http://agouliel.github.io">GitHub</a> • 
+        <a href="https://www.linkedin.com/in/goulielmos">LinkedIn</a>
+    </div>
+</div>
 
-<p>My Linkedin profile: <a href="https://www.linkedin.com/in/goulielmos">https://www.linkedin.com/in/goulielmos</a></p>
+<script>
+    // Logic to make links dynamic based on the current host
+    const currentHost = window.location.origin; // e.g., https://agouliel.ddns.net
+    const projectLinks = document.querySelectorAll('.project-link');
 
-<p>My personal projects: <a href="https://agouliel.ddns.net/django">Django DB</a>, <a href="https://agouliel.ddns.net/flask">Flask DB</a>, <a href="https://agouliel.ddns.net/microblog">React Microblog</a>, <a href="https://agouliel.ddns.net/alexgram">AlexGram</a>, <a href="https://agouliel.ddns.net/guyton">Guyton</a>, <a href="https://agouliel.ddns.net/next">Next.js</a></p>
+    projectLinks.forEach(link => {
+        const path = link.getAttribute('href');
+        // If the link is relative, prepend the current host
+        if (path.startsWith('/')) {
+            link.href = currentHost + path;
+        }
+    });
+</script>
 
 </body>
 </html>
