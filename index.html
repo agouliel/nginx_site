@@ -12,6 +12,20 @@
             --card-bg: rgba(255, 255, 255, 0.8);
             --text-main: #1e293b;
             --text-muted: #64748b;
+            --section-bg: rgba(255, 255, 255, 0.4);
+            --border: #e2e8f0;
+            --project-bg: white;
+        }
+
+        [data-theme="dark"] {
+            --primary: #60a5fa;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --card-bg: rgba(30, 41, 59, 0.9);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --section-bg: rgba(255, 255, 255, 0.05);
+            --border: #334155;
+            --project-bg: #1e293b;
         }
 
         body {
@@ -72,7 +86,7 @@
             text-align: left;
             margin-bottom: 1.5rem;
             padding: 1rem;
-            background: rgba(255, 255, 255, 0.4);
+            background: var(--section-bg);
             border-radius: 12px;
         }
 
@@ -99,11 +113,11 @@
         }
 
         .project-link {
-            background: white;
+            background: var(--project-bg);
             padding: 8px;
             border-radius: 8px;
             font-size: 0.9rem;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border);
             transition: all 0.2s;
         }
 
@@ -115,12 +129,36 @@
 
         .social-links {
             margin-top: 2rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid var(--border);
             padding-top: 1.5rem;
+        }
+
+        .dark-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+
+        .dark-toggle:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
+
+<button class="dark-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
 
 <div class="container">
     <img src="alex.jpg" alt="Alexandros Goulielmos">
@@ -159,16 +197,20 @@
 </div>
 
 <script>
-    // Logic to make links dynamic based on the current host
-    const currentHost = window.location.origin; // e.g., https://agouliel.ddns.net
-    const projectLinks = document.querySelectorAll('.project-link');
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
 
-    projectLinks.forEach(link => {
-        const path = link.getAttribute('href');
-        // If the link is relative, prepend the current host
-        if (path.startsWith('/')) {
-            link.href = currentHost + path;
-        }
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        root.setAttribute('data-theme', 'dark');
+        toggle.textContent = '☀️';
+    }
+
+    toggle.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        toggle.textContent = isDark ? '🌙' : '☀️';
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
     });
 </script>
 
