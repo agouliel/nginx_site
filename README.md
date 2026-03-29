@@ -4,10 +4,10 @@
 3. `git remote add origin git@github.com:agouliel/nginx_site.git`
 4. `git fetch`
 5. `git checkout -f main`
-6. copy other static files to nginx home
+6. copy other static files
 
 # Web page
-**Glassmorphism** card design, using a modern **sans-serif typeface**, and with some subtle hover effects. Also includes a script to handle the dynamic links so they adapt to whatever host we're using.
+**Glassmorphism** card design, using a modern **sans-serif typeface**, and with some subtle hover effects.
 
 1. Typography: **"Inter"** (the gold standard for modern tech resumes).
 2. Visual Hierarchy: bold labels and smaller muted text for "Previous" companies to keep the interface clean.
