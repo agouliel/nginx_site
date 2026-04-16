@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.35;
+            font-size: 10pt;
+        }
+        .header {
+            background-color: #1c366b;
+            color: white;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-content {
+            width: 70%;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26pt;
+            font-weight: bold;
+        }
+        .header h2 {
+            margin: 5px 0 15px 0;
+            font-size: 15pt;
+            font-weight: normal;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 9pt;
+        }
+        .photo-container {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.2);
+            overflow: hidden;
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .main-container {
+            padding: 30px 50px;
+        }
+        .section {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .section-label {
+            width: 150px;
+            font-weight: bold;
+            font-size: 10pt;
+            text-transform: uppercase;
+            color: #333;
+            padding-right: 20px;
+        }
+        .section-content {
+            flex: 1;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+            margin-bottom: 1px;
+        }
+        .company-name {
+            font-style: italic;
+            margin-bottom: 6px;
+            color: #444;
+        }
+        .experience-block {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 4px 0;
+            padding-left: 18px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+        .separator {
+            border-bottom: 2px solid #000;
+            margin: 15px 0;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>Alexandros Goulielmos</h1>
+            <h2>Software Engineer</h2>
+            <div class="contact-grid">
+                <div>📞 (hidden)</div>
+                <div>🎂 22/01/1980</div>
+                <div>✉️ (hidden)</div>
+                <div>🇬🇷 Greek</div>
+            </div>
+        </div>
+        <div class="photo-container">
+            <img src="alex.jpg" alt="Alexandros Goulielmos">
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="section">
+            <div class="section-label">Professional Experience</div>
+            <div class="section-content">
+                <!-- EXP 1 -->
+                <div class="experience-block">
+                    <div class="job-title">Tech Lead - DigiTech Marketing | May 2025 - Present</div>
+                    <ul>
+                        <li>Building and leading a team responsible for the development of a state-of-the-art iGaming platform</li>
+                        <li>Team size: 6</li>
+                        <li>Development tech stack: FastAPI (Python) for the backend and React/NextJS for the frontend</li>
+                        <li>DevOps tech stack: Postgres database, Cloudflare/Bunny CDN, AWS production deployments using Docker and Azure Pipelines</li>
+                        <li>Duties: Code reviews, performance evaluation, assignment and monitoring of Jira tickets, architecture, personal engineering work</li>
+                        <li>Actively involved in building the team: headhunting, interviews, pairing tests</li>
+                        <li>Bridging the gap between stakeholders, product people and engineers</li>
+                    </ul>
+                </div>
+                
+                <div style="height: 15px;"></div>
+
+                <!-- EXP 2 -->
+                <div class="experience-block">
+                    <div class="job-title">Lead Software Engineer - Ionia Management | Sep 2019 - May 2025</div>
+                    <div style="margin-top: 5px;"><strong>1. DUTIES:</strong></div>
+                    <ul>
+                        <li>Project management</li>
+                        <li>Legacy software rewrites (desktop to web)</li>
+                        <li>Market research for fitting software solutions</li>
+                        <li>Integration</li>
+                        <li>In-house development (personal work, talent acquisition using UpWork and LinkedIn, writing specification documents, interviewing, team management, acceptance testing, deployment)</li>
+                    </ul>
+                    <div><strong>2. TECHNOLOGIES USED:</strong></div>
+                    <ul>
+                        <li>SQL Server databases (T-SQL development and db administration)</li>
+                        <li>Python scripting</li>
+                        <li>C# (.NET) & Python backends</li>
+                        <li>React / Razor / ASP.NET / Django web frontends</li>
+                        <li>WPF / XAML desktop frontends</li>
+                        <li>SharePoint / O365 / PowerApps for intranet and document management</li>
+                        <li>Modern frameworks (WebAPI and JSON) for vessel communications</li>
+                        <li>Power BI and DAX reporting</li>
+                    </ul>
+                    <div><strong>3. THIRD-PARTY SHIPPING SOLUTIONS:</strong></div>
+                    <ul>
+                        <li>Customization, maintenance and support</li>
+                        <li>BENEFIT ERP system</li>
+                        <li>ULYSSES Document Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+        
+        <!-- PAGE 2 HEADER SIMULATION (WITHOUT NAME) -->
+        <div style="height: 30px;"></div>
+
+        <div class="section">
+            <div class="section-label">Experience (Cont.)</div>
+            <div class="section-content">
+                <!-- EXP 3 -->
+                <div class="experience-block">
+                    <div class="job-title">Senior Software Engineer - Intralot | Jun 2017 - Aug 2019</div>
+                    <ul>
+                        <li>Development of the back-office component (BOS) of the company's lottery solution</li>
+                        <li>Oracle PL/SQL development</li>
+                        <li>.NET web client and Crystal reports</li>
+                        <li>Experienced in the following lotteries: Greece (OPAP), Malaysia, Azerbaijan, Taiwan, Philippines, Bulgaria</li>
+                        <li>Also participating in DevOps procedures</li>
+                    </ul>
+                </div>
+
+                <div style="height: 15px;"></div>
+
+                <!-- EXP 4 -->
+                <div class="experience-block">
+                    <div class="job-title">Database Developer - Athens Stock Exchange | Sep 2008 - May 2017</div>
+                    <ul>
+                        <li>Oracle PL/SQL development</li>
+                        <li>Database-embedded Java</li>
+                        <li>Oracle APEX web development</li>
+                        <li>Oracle Forms</li>
+                        <li>BusinessObjects reporting & administration</li>
+                    </ul>
+                </div>
+
+                <div style="height: 15px;"></div>
+
+                <!-- EXP 5 -->
+                <div class="experience-block">
+                    <div class="job-title">Java Developer - Info-Quest | 2007 - 2008</div>
+                    <ul>
+                        <li>Java & J2EE development</li>
+                        <li>Oracle Portal</li>
+                        <li>Oracle Application Server administration</li>
+                        <li>JSP</li>
+                        <li>XML</li>
+                    </ul>
+                </div>
+
+                <div style="height: 15px;"></div>
+
+                <!-- EXP 6 -->
+                <div class="experience-block">
+                    <div class="job-title">Java Developer - Intrasoft International | 2006 - 2006</div>
+                    <ul>
+                        <li>Java & J2EE development</li>
+                        <li>EJBs</li>
+                        <li>Struts</li>
+                        <li>Weblogic administration</li>
+                    </ul>
+                </div>
+
+                <div style="height: 15px;"></div>
+
+                <!-- EXP 7 -->
+                <div class="experience-block">
+                    <div class="job-title">Java Developer - G.N.T. Information Systems S.A. | 2006 - 2006</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <div class="section-label">Education</div>
+            <div class="section-content">
+                <div class="experience-block">
+                    <div class="job-title">MSc, Business Administration | 2006 - 2007</div>
+                    <div>National Technical University of Athens</div>
+                </div>
+                <div class="experience-block">
+                    <div class="job-title">MSc, Information Networking | 2004 - 2005</div>
+                    <div>Carnegie Mellon University</div>
+                </div>
+                <div class="experience-block">
+                    <div class="job-title">Electrical & Computer Engineering | 1998 - 2003</div>
+                    <div>National Technical University of Athens</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <div class="section-label">Seminars</div>
+            <div class="section-content">
+                <div>• Oracle Advanced PL/SQL</div>
+                <div>• Oracle Database Administration 10g</div>
+                <div>• Oracle Application Server 10g R2</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
