@@ -100,9 +100,12 @@
         .page-break {
             page-break-before: always;
         }
+        .home-link { position: absolute; top: 10px; left: 15px; color: #fff; text-decoration: none; font-size: 14px; }
+        @media print { .home-link { display: none; } }
     </style>
 </head>
 <body>
+    <a href="/" class="home-link">&larr; Home</a>
     <div class="header">
         <div class="header-content">
             <h1>Alexandros Goulielmos</h1>
