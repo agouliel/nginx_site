@@ -1,0 +1,23 @@
+﻿<body>
+
+<script type='text/javascript' src='http://www.listen2myradio.com/newflashradio/swfobject.js'>
+</script>
+
+<div id='mediaspace'></div>
+
+<script type='text/javascript'>
+var so = new SWFObject('http://www.listen2myradio.com/newflashradio/player.swf','mpl','330','25','9');
+so.addParam('wmode','opaque');
+so.addVariable('file','http://78.159.107.249:30175/;playlist.pls');
+so.addVariable('plugins', 'livestream-1');
+so.addVariable('livestream.file', 'http://78.159.107.249:30175/;playlist.pls');
+so.addVariable('type','sound');
+so.addVariable('backcolor','000000');
+so.addVariable('frontcolor','FFFFFF');
+so.addVariable('lightcolor','FF9900');
+so.addVariable('autostart','true');
+so.addVariable('bufferlength','20');
+so.write('mediaspace');
+</script>
+
+</body>
