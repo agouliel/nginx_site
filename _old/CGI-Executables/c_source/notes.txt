@@ -1,0 +1,4 @@
+argtonum + numtoarg: c_src/my_encod/binary
+grnum: c_src/my_encod/greek
+unic1253: c_src/encoding
+
